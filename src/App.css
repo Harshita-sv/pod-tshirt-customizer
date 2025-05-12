@@ -1,4 +1,15 @@
 /* Base styles with modern font */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+}
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #d1b1de 0%, #c7cfdf 100%);
+  background-attachment: fixed; /* This ensures the background stays fixed during scroll */
+}
 * {
   margin: 0;
   padding: 0;
@@ -582,4 +593,44 @@ h1 {
   0% { box-shadow: 0 0 0 0 rgba(167, 139, 250, 0.4); }
   70% { box-shadow: 0 0 0 15px rgba(167, 139, 250, 0); }
   100% { box-shadow: 0 0 0 0 rgba(167, 139, 250, 0); }
+}
+
+/* ===== Mobile responsiveness ===== */
+@media (max-width: 768px) {
+  .customizer-layout {
+    flex-direction: column;
+  }
+
+  .preview-section {
+    align-items: center;
+  }
+
+  .tshirt-preview svg {
+    width: 200px;
+    height: auto;
+  }
+
+  .image-overlay {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .text-overlay {
+    font-size: 12px !important;
+  }
+
+  .product-details {
+    margin-top: 10px;
+  }
+
+  .website-name {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .theme-indicator {
+    text-align: center;
+    font-size: 14px;
+  }
 }
